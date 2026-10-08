@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<link rel="canonical" href="https://bossiptvusaservice.github.io/bossiptvproviderusa/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>IPTV Provide USA | 15,000+ HD Channels | Boss IPTV</title>
 <meta name="google-site-verification" content="lsxOOLldYjJG6D73qecAwlJ4KBuRRUidbGVSWRWCEjM" />
+<title>IPTV Provide USA | 15,000+ HD Channels | Boss IPTV</title>
 <meta name="description" content="Looking for an IPTV Provide you can trust? Boss IPTV offers 15,000+ HD live channels, 50,000+ VOD titles, many languages and a free trial in the USA.">
 <meta name="keywords" content="IPTV Provide, IPTV USA, IPTV Box USA, Boss IPTV, IPTV free trial">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0a1020">
-<link rel="canonical" href="https://www.bossiptvusa.com/iptv-service/">
+<link rel="canonical" href="https://bossiptvusaservice.github.io/bossiptvproviderusa/">
 <link rel="icon" type="image/png" href="https://www.bossiptvusa.com/wp-content/uploads/2025/09/Boss-New-logo-1.png">
 <link rel="apple-touch-icon" href="https://www.bossiptvusa.com/wp-content/uploads/2025/09/Boss-New-logo-1.png">
 <meta property="og:type" content="website">
@@ -213,9 +212,23 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:24px 0;text-alig
 <section class="blog w" id="blog">
 <h2>Latest From Our IPTV Blog</h2>
 <p>Read tips, guides and news about IPTV, devices and getting the best picture at home.</p>
-<iframe src="https://script.google.com/macros/s/AKfycby0eBL4UHXL0kirA5zTgEAj9-Ka_LZIVstCWfL9Z-_rsW2vPEGGEzAzwiCzc1XoBNBHjw/exec" title="Boss IPTV Blog" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-<p class="note">Blog not loading? <a href="https://script.google.com/macros/s/AKfycby0eBL4UHXL0kirA5zTgEAj9-Ka_LZIVstCWfL9Z-_rsW2vPEGGEzAzwiCzc1XoBNBHjw/exec" target="_blank" rel="noopener">Open the blog in a new tab</a>.</p>
+<div class="grid" id="blogGrid">
+<div class="card"><h3>Visit the Boss IPTV Blog</h3><p>Guides, set-up tips and IPTV news for USA viewers, all in one place.</p><p style="margin-top:14px"><a class="btn" href="https://script.google.com/macros/s/AKfycby0eBL4UHXL0kirA5zTgEAj9-Ka_LZIVstCWfL9Z-_rsW2vPEGGEzAzwiCzc1XoBNBHjw/exec" target="_blank" rel="noopener">Read the Blog</a></p></div>
+</div>
 </section>
+<script>
+(function(){
+var U="https://script.google.com/macros/s/AKfycby0eBL4UHXL0kirA5zTgEAj9-Ka_LZIVstCWfL9Z-_rsW2vPEGGEzAzwiCzc1XoBNBHjw/exec",g=document.getElementById("blogGrid");
+function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+fetch(U+"?action=posts").then(function(r){return r.json()}).then(function(d){
+var l=Array.isArray(d)?d:(d.posts||[]);if(!l.length)return;
+g.innerHTML=l.slice(0,6).map(function(p){
+var u=/^https?:/.test(p.url||"")?p.url:U;
+return '<div class="card">'+(/^https?:/.test(p.image||"")?'<img src="'+esc(p.image)+'" alt="'+esc(p.title)+'" loading="lazy" style="border-radius:10px;margin-bottom:10px;width:100%">':'')+
+'<h3>'+esc(p.title)+'</h3><p>'+esc(p.excerpt||"")+'</p><p style="margin-top:12px"><a href="'+esc(u)+'" target="_blank" rel="noopener">Read more →</a></p></div>'}).join("")
+}).catch(function(){});
+})();
+</script>
 </main>
 <footer><div class="w">© Boss IPTV USA. All rights reserved.</div></footer>
 </body>
